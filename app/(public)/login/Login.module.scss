@@ -1,0 +1,102 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f5f4f6;
+  color: #000;
+
+  .firstHalf,
+  .secondHalf {
+    width: 50%;
+    height: 100vh;
+  }
+
+  .firstHalf {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .loginContainer {
+      background-color: #fff;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 30px 20px;
+      gap: 14px;
+
+      .fieldWrapper {
+        position: relative;
+        padding-bottom: 20px;
+
+        > input {
+          background: #f5f4f6;
+          outline: 0px;
+          border: 1px solid #f5f4f6;
+          border-radius: 10px;
+          height: 50px;
+          padding: 4px 10px;
+          min-width: 300px;
+          color: #000;
+          font-size: 16px;
+
+          @media only screen and (max-width: 480px) {
+            width: 100%;
+          }
+        }
+
+        .otpInput {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          input {
+            background: #f5f4f6;
+            outline: 0px;
+            border: 1px solid #f5f4f6;
+            border-radius: 10px;
+            height: 50px;
+            width: 50px;
+            min-width: 50px;
+            padding: 4px 10px;
+            color: #000;
+          }
+        }
+
+        .errorInput {
+          border-color: red;
+          input {
+            border-color: red;
+          }
+        }
+
+        .error {
+          position: absolute;
+          bottom: 0px;
+          color: red;
+          font-size: 14px;
+        }
+      }
+
+      button {
+        padding: 10px 30px;
+        background-color: #000;
+        border-radius: 10px;
+        border: none;
+        height: 50px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .secondHalf {
+    background-image: url("../../images/login.jpg");
+
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+}
